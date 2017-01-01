@@ -10,9 +10,6 @@ export default {
 }
 </script>
 
-<style>
-html,
-body {
-
-}
+<style lang="sass">
+@import 'src/sass/app';
 </style>

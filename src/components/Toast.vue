@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import eventHub from 'eventHub'
+import EventHub from 'EventHub'
 
 export default {
   data: {
@@ -12,7 +12,7 @@ export default {
     }
   },
   created() {
-    eventHub.$on('toast:show', () => {
+    EventHub.$on('toast:show', () => {
       window.setTimeout(() => {
         this.isShown = false
       }, 3000)

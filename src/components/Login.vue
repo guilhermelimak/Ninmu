@@ -11,7 +11,7 @@
 <script>
 import Vue from 'vue'
 import LoginForm from 'components/form/LoginForm'
-import eventHub from 'src/eventHub'
+import EventHub from 'src/EventHub'
 
 import { Col, Row } from 'element-ui'
 
@@ -20,7 +20,13 @@ Vue.use(Row)
 
 export default {
   created() {
-    eventHub.$on('loginForm:submit', (form) => {
+    EventHub
+    .$on('loginForm:doLogin', (form) => {
+
+    })
+
+    EventHub
+    .$on('loginForm:doSignup', (form) => {
 
     })
   },

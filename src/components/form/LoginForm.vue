@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import eventHub from 'src/eventHub'
+import EventHub from 'src/EventHub'
 
 import { Input, Button } from 'element-ui'
 Vue.use(Input)
@@ -39,8 +39,11 @@ export default {
     }
   },
   methods: {
-    submit() {
-      eventHub.$emit('loginForm:submit', this.form)
+    login() {
+      EventHub.$emit('loginForm:doLogin', this.form)
+    },
+    signup() {
+      EventHub.$emit('loginForm:doSignup', this.form)
     },
   },
 }

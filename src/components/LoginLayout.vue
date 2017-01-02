@@ -23,28 +23,33 @@ Vue.use(Row)
 
 export default {
   created() {
-    EventHub
-    .$on('loginForm:doLogin', (form) => {
-      auth
-      .signInWithEmailAndPassword(form.email, form.password)
-      .then(() => database.ref('/users'))
-      .then(() => this.$router.push('/choose-project'))
-      .catch(error => Notification.error({
-        title: 'Error',
-        message: error.message,
-      }))
-    })
+    this.registerEvents()
+  },
+  methods: {
+    registerEvents() {
+      EventHub
+      .$on('loginForm:doLogin', (form) => {
+        auth
+        .signInWithEmailAndPassword(form.email, form.password)
+        .then(() => database.ref('/users'))
+        .then(() => this.$router.push('/choose-project'))
+        .catch(error => Notification.error({
+          title: 'Error',
+          message: error.message,
+        }))
+      })
 
-    EventHub
-    .$on('loginForm:doSignup', (form) => {
-      auth
-      .createUserWithEmailAndPassword(form.email, form.password)
-      .then(() => this.$router.push('/choose-project'))
-      .catch(error => Notification.error({
-        title: 'Error',
-        message: error.message,
-      }))
-    })
+      EventHub
+      .$on('loginForm:doSignup', (form) => {
+        auth
+        .createUserWithEmailAndPassword(form.email, form.password)
+        .then(() => this.$router.push('/choose-project'))
+        .catch(error => Notification.error({
+          title: 'Error',
+          message: error.message,
+        }))
+      })
+    },
   },
   components: {
     LoginForm,

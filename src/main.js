@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from 'src/App'
+import '../node_modules/animate.css/animate.css'
 
 import routes from 'src/routes'
 

@@ -9,7 +9,7 @@ import routes from 'src/routes'
 
 Vue.use(VueRouter)
 
-const router = new VueRouter({ routes })
+export const router = new VueRouter({ routes })
 
 /* eslint-disable no-new */
 App.router = router

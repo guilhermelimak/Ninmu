@@ -1,4 +1,4 @@
-# taskmanager
+# Nimsu
 
 > A Vue.js project
 

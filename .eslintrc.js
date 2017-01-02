@@ -18,6 +18,9 @@ module.exports = {
     }
   },
   // add your custom rules here
+  'globals': {
+    'Vue': true
+  },
   'rules': {
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {

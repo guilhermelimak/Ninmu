@@ -1,21 +1,36 @@
 <template>
-<div>
-  <el-input placeholder="Email" v-model="form.email">
+<div class="login-form">
+  <el-input
+    class="login-form__input shadow-input"
+    placeholder="Email"
+    v-model="form.email">
   </el-input>
 
-  <el-input placeholder="Password" v-model="form.password">
+  <el-input
+    class="login-form__input shadow-input"
+    placeholder="Password"
+    type="password"
+    v-model="form.password">
   </el-input>
 
   <el-row type="flex" justify="center">
-    <el-col :span="12">
-      <el-button type="text">
-        Signup
+    <el-col :span="6">
+      <el-button
+        class="login-form__button login-button animated-button"
+        @click="login"
+        type="primary">
+        Login
       </el-button>
     </el-col>
+  </el-row>
 
-    <el-col :span="12">
-      <el-button type="primary">
-        Login
+  <el-row type="flex" justify="center">
+    <el-col :span="6">
+      <el-button
+        class="animated-button login-form__button signup-button"
+        type="danger"
+        @click="signup">
+        Signup
       </el-button>
     </el-col>
   </el-row>
@@ -26,6 +41,7 @@
 import EventHub from 'src/EventHub'
 
 import { Input, Button } from 'element-ui'
+
 Vue.use(Input)
 Vue.use(Button)
 
@@ -33,8 +49,8 @@ export default {
   data() {
     return {
       form: {
-        email: null,
-        password: null,
+        email: '',
+        password: '',
       },
     }
   },
@@ -50,5 +66,8 @@ export default {
 </script>
 
 <style lang="sass">
-
+.login-form
+  &__button
+    width: 100%;
+    margin-bottom: 10px !important;
 </style>

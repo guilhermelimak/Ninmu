@@ -1,4 +1,4 @@
-# Nimsu
+# Ninmu
 
 > A Vue.js project
 

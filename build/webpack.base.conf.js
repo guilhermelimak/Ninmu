@@ -26,6 +26,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.common.js',
       'src': path.resolve(__dirname, '../src'),
+      'test': path.resolve(__dirname, '../test'),
       'components': path.resolve(__dirname, '../src/components')
     }
   },

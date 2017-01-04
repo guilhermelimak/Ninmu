@@ -18,7 +18,7 @@
       <el-button
         class="login-form__button login-button animated-button"
         @click="login"
-        type="primary">
+        type="success">
         Login
       </el-button>
     </el-col>
@@ -27,8 +27,8 @@
   <el-row type="flex" justify="center">
     <el-col :span="6">
       <el-button
-        class="animated-button login-form__button signup-button"
-        type="danger"
+        class="signup-form__button signup-button animated-button"
+        type="primary"
         @click="signup">
         Signup
       </el-button>
@@ -66,6 +66,7 @@ export default {
 </script>
 
 <style lang="sass">
+.signup-form,
 .login-form
   &__button
     width: 100%;
